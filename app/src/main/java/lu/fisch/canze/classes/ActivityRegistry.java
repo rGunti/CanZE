@@ -28,6 +28,7 @@ import lu.fisch.canze.activities.HeatmapBatcompActivity;
 import lu.fisch.canze.activities.HeatmapCellvoltageActivity;
 import lu.fisch.canze.activities.LeakCurrentsActivity;
 import lu.fisch.canze.activities.MainActivity;
+import lu.fisch.canze.activities.PandaDashboardActivity;
 import lu.fisch.canze.activities.PredictionActivity;
 import lu.fisch.canze.activities.RangeActivity;
 import lu.fisch.canze.activities.ResearchActivity;
@@ -66,6 +67,7 @@ public class ActivityRegistry {
     public static final int ACTIVITY_DASH                 = 21;
     public static final int ACTIVITY_RESEARCH             = 22;
     public static final int ACTIVITY_FIELD_TEST           = 23;
+    public static final int ACTIVITY_PANDA_DASH           = 24;
 
     public static final int[] ACTIVITIES_MAIN = {
             ACTIVITY_CONSUMPTION,
@@ -95,7 +97,8 @@ public class ActivityRegistry {
     public static final int[] ACTIVITIES_EXPERIMENTAL = {
             ACTIVITY_DASH,
             ACTIVITY_RESEARCH,
-            ACTIVITY_FIELD_TEST
+            ACTIVITY_FIELD_TEST,
+            ACTIVITY_PANDA_DASH
     };
 
     public void loadSelection()
@@ -176,6 +179,7 @@ public class ActivityRegistry {
         activities.add(new Activity(ACTIVITY_DASH, R.string.button_Dash, R.drawable.button_dash, DashActivity.class));
         activities.add(new Activity(ACTIVITY_RESEARCH, R.string.button_Research, R.drawable.button_microscope, ResearchActivity.class));
         activities.add(new Activity(ACTIVITY_FIELD_TEST, R.string.button_FieldTest, R.drawable.button_test, FieldTestActivity.class));
+        activities.add(new Activity(ACTIVITY_PANDA_DASH, R.string.panda_dash, R.drawable.button_dash, PandaDashboardActivity.class));
 
         // sort by title
         Collections.sort(activities, new Comparator<Activity>() {

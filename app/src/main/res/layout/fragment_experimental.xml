@@ -139,7 +139,7 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/buttonPandaDash"
+                        android:id="@+id/buttonPandaDashboard"
                         style="?android:attr/button"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"

@@ -37,6 +37,7 @@ import lu.fisch.canze.R;
 import lu.fisch.canze.activities.DashActivity;
 import lu.fisch.canze.activities.FieldTestActivity;
 import lu.fisch.canze.activities.MainActivity;
+import lu.fisch.canze.activities.PandaDashboardActivity;
 import lu.fisch.canze.activities.ResearchActivity;
 import lu.fisch.canze.activities.TwingoTestActivity;
 import lu.fisch.canze.activities.TwizyTestActivity;
@@ -63,6 +64,8 @@ public class ExperimentalFragment extends Fragment {
         activateButton(view, R.id.buttonTwingoTest, TwingoTestActivity.class, false);
 
         activateButton(view, R.id.buttonTwizyTest, TwizyTestActivity.class, false);
+
+        activateButton(view, R.id.buttonPandaDashboard, PandaDashboardActivity.class, false);
 
         return view;
     }

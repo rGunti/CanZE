@@ -14,7 +14,7 @@ android {
     compileSdkVersion 29
     //buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "lu.fisch.canze"
+        applicationId "ch.floppypanda.canze"
         minSdkVersion 21
         targetSdkVersion 29
         versionName '1.62'

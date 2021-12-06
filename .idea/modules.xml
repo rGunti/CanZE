@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CanZE.iml" filepath="$PROJECT_DIR$/CanZE.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CanZE.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CanZE.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudioProjects.CanZE.iml" filepath="$PROJECT_DIR$/.idea/modules/StudioProjects.CanZE.iml" />
     </modules>
   </component>
 </project>

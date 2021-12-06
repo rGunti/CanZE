@@ -877,5 +877,6 @@
 
     <!-- ZE50 test -->
     <string name="title_activity_ZE50Test">ZE50 test</string>
+    <string name="panda_dash">Panda Dash</string>
 
 </resources>

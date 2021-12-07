@@ -13,9 +13,10 @@ import java.util.Map;
 import lu.fisch.canze.R;
 import lu.fisch.canze.actors.Field;
 import lu.fisch.canze.classes.Sid;
+import lu.fisch.canze.interfaces.DebugListener;
 
-public class PandaDashboardActivity extends CanzeActivity {
-    private class PandaDashboardRecord {
+public class PandaDashboardActivity extends CanzeActivity implements DebugListener {
+    private static class PandaDashboardRecord {
         int textRef;
         String format;
 
@@ -36,7 +37,10 @@ public class PandaDashboardActivity extends CanzeActivity {
 
     @Override
     protected void initListeners() {
-        addField(Sid.DcPowerOut);
+        MainActivity.getInstance().setDebugListener(this);
+        for (String field : fieldMapping.keySet()) {
+            addField(field);
+        }
     }
 
     @Override

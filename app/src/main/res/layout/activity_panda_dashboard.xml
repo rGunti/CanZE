@@ -27,42 +27,58 @@
 
                 <TableRow>
                     <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
+                    <TextView
                         android:text="@string/label_DcPwr"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal"
                         />
                     <TextView
                         android:text=""
-                        android:layout_width="20dp"
-                        android:layout_weight="1" />
+                        android:layout_width="20dp" />
                     <TextView
                         android:text="@string/label_DcLoad"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                 </TableRow>
 
                 <TableRow>
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                     <TextView
                         android:id="@+id/textDcPwr"
                         android:text="@string/default_Dash"
                         android:textSize="48sp"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
-                        android:text="@string/default_DoubleSpace"
-                        android:layout_weight="1" />
+                        android:text=""
+                        android:layout_width="20dp" />
                     <TextView
                         android:id="@+id/textDcLoad"
                         android:text="@string/default_Dash"
                         android:textSize="48sp"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                 </TableRow>
             </TableLayout>
+
+            <!-- Spacer -->
+            <TableRow android:layout_height="50dp" android:layout_width="match_parent">
+                <TextView android:text="@string/default_DoubleSpace" />
+            </TableRow>
 
             <TableLayout
                 android:layout_width="fill_parent"
@@ -70,40 +86,51 @@
 
                 <TableRow>
                     <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
+                    <TextView
                         android:text="@string/label_BatteryTemperature"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal"
                         />
                     <TextView
                         android:text=""
-                        android:layout_width="20dp"
-                        android:layout_weight="1" />
+                        android:layout_width="20dp" />
                     <TextView
                         android:text="@string/label_Soc"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                 </TableRow>
 
                 <TableRow>
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                     <TextView
                         android:id="@+id/textBatteryTemperature"
                         android:text="@string/default_Dash"
                         android:textSize="48sp"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
-                        android:text="@string/default_DoubleSpace"
-                        android:layout_weight="1" />
+                        android:text=""
+                        android:layout_width="20dp" />
                     <TextView
                         android:id="@+id/textPandaUserSoC"
                         android:text="@string/default_Dash"
                         android:textSize="48sp"
                         android:gravity="center"
-                        android:layout_weight="5"
+                        android:layout_width="150dp"
                         android:background="?attr/colorButtonNormal" />
+                    <TextView
+                        android:text="@string/default_DoubleSpace"
+                        android:layout_weight="1" />
                 </TableRow>
             </TableLayout>
 

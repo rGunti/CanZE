@@ -32,7 +32,7 @@
                     <TextView
                         android:text="@string/label_DcPwr"
                         android:gravity="start"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal"
                         />
                     <TextView
@@ -41,7 +41,7 @@
                     <TextView
                         android:text="@string/label_StateOfCharge"
                         android:gravity="start"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text="@string/default_DoubleSpace"
@@ -57,7 +57,7 @@
                         android:text="-99.9"
                         android:textSize="48sp"
                         android:gravity="end"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text=""
@@ -67,7 +67,7 @@
                         android:text="100.0"
                         android:textSize="48sp"
                         android:gravity="end"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text="@string/default_DoubleSpace"
@@ -86,12 +86,14 @@
                                 android:textStyle="bold"
                                 android:gravity="end"
                                 android:layout_weight="1"
+                                android:textSize="20sp"
                                 />
                             <TextView
                                 android:text="@string/default_DoubleSpace" />
                             <TextView
                                 android:text="@string/label_KiloWatts"
                                 android:gravity="end"
+                                android:textSize="20sp"
                                 />
                         </TableRow>
                     </TableLayout>
@@ -113,11 +115,13 @@
                                 android:textStyle="bold"
                                 android:gravity="end"
                                 android:layout_weight="3"
+                                android:textSize="20sp"
                                 />
                             <TextView
                                 android:text="@string/label_Percentage"
                                 android:gravity="end"
                                 android:layout_weight="1"
+                                android:textSize="20sp"
                                 />
                         </TableRow>
                     </TableLayout>
@@ -143,7 +147,7 @@
                     <TextView
                         android:text="@string/label_BatteryTemperature"
                         android:gravity="start"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal"
                         />
                     <TextView
@@ -152,7 +156,7 @@
                     <TextView
                         android:text="@string/label_ThermalComfortPowerShort"
                         android:gravity="start"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text="@string/default_DoubleSpace"
@@ -168,7 +172,7 @@
                         android:text="99"
                         android:textSize="48sp"
                         android:gravity="end"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text=""
@@ -178,7 +182,7 @@
                         android:text="0.00"
                         android:textSize="48sp"
                         android:gravity="end"
-                        android:layout_width="150dp"
+                        android:layout_width="190dp"
                         android:background="?attr/colorButtonNormal" />
                     <TextView
                         android:text="@string/default_DoubleSpace"
@@ -195,6 +199,7 @@
                                 android:text="@string/label_DegreesCelsius"
                                 android:gravity="end"
                                 android:layout_weight="3"
+                                android:textSize="20sp"
                                 />
                         </TableRow>
                     </TableLayout>
@@ -208,22 +213,25 @@
                                 android:text="-00.0°C"
                                 android:gravity="end"
                                 android:textStyle="bold"
-                                android:width="60dp"
+                                android:width="75dp"
                                 android:textColor="@color/Green"
+                                android:textSize="20sp"
                                 />
                             <TextView
                                 android:id="@+id/textTempOut"
                                 android:text="-00.0°C"
                                 android:gravity="end"
                                 android:textStyle="bold"
-                                android:width="60dp"
+                                android:width="75dp"
                                 android:textColor="@color/DodgerBlue"
+                                android:textSize="20sp"
                                 />
                             <TextView android:text="@string/default_DoubleSpace"
                                 android:layout_weight="1"
                                 />
                             <TextView
                                 android:text="@string/label_KiloWatts"
+                                android:textSize="20sp"
                                 android:gravity="end" />
                         </TableRow>
                     </TableLayout>

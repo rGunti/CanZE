@@ -52,6 +52,10 @@ android {
         abortOnError false
         disable 'TypographyFractions'
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 def getGitRevParseInfo() {

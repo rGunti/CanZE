@@ -878,5 +878,12 @@
     <!-- ZE50 test -->
     <string name="title_activity_ZE50Test">ZE50 test</string>
     <string name="panda_dash">Panda Dash</string>
+    <string name="label_KiloWatts">kW</string>
+    <string name="label_Percentage">%</string>
+    <string name="label_DegreesCelsius">°C</string>
+    <string name="label_AcPower">A/C Power</string>
+    <string name="label_ThermalComfortPowerShort">HVAC Consumption</string>
+    <string name="label_Watts">W</string>
+    <string name="label_EcoModeEnabled">ECO</string>
 
 </resources>

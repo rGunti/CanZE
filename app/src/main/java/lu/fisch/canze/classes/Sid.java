@@ -43,7 +43,11 @@ public class Sid {
     public static final String TireFLPressure                       = "673.40";
     public static final String HeaterSetpoint                       = "699.8";
 
+    public static final String EcoMode                              = "764.6143.86";
     public static final String ThermalComfortPower                  = "764.6143.88";
+    public static final String TemperatureExterior                  = "764.6143.110";
+    public static final String TemperatureInterior                  = "764.6121.26";
+    public static final String TemperatureHvacSetPoint              = "800.6105.24";
     public static final String Pressure                             = "764.6143.134";
     public static final String OH_ClimTempDisplay                   = "764.6145.29";
 

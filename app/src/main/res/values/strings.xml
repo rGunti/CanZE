@@ -877,7 +877,7 @@
 
     <!-- ZE50 test -->
     <string name="title_activity_ZE50Test">ZE50 test</string>
-    <string name="panda_dash">Panda Dash</string>
+    <string name="panda_dash">Panda Dashboard</string>
     <string name="label_KiloWatts">kW</string>
     <string name="label_Percentage">%</string>
     <string name="label_DegreesCelsius">°C</string>

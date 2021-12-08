@@ -55,6 +55,7 @@ import lu.fisch.canze.activities.ClimaTechActivity;
 import lu.fisch.canze.activities.ConsumptionActivity;
 import lu.fisch.canze.activities.DrivingActivity;
 import lu.fisch.canze.activities.MainActivity;
+import lu.fisch.canze.activities.PandaDashboardActivity;
 import lu.fisch.canze.activities.SpeedcontrolActivity;
 
 
@@ -90,6 +91,8 @@ public class MainFragment extends Fragment {
             activateButton(view, R.id.buttonBraking, BrakingActivity.class);
 
             activateButton(view, R.id.buttonSpeed, SpeedcontrolActivity.class);
+
+            activateButton(view, R.id.buttonPandaDashboard, PandaDashboardActivity.class);
 
             getNews(view);
             return view;

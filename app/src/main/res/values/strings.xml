@@ -885,5 +885,7 @@
     <string name="label_ThermalComfortPowerShort">HVAC Consumption</string>
     <string name="label_Watts">W</string>
     <string name="label_EcoModeEnabled">ECO</string>
+    <string name="label_Odo">ODO:</string>
+    <string name="label_Trip">Trip:</string>
 
 </resources>

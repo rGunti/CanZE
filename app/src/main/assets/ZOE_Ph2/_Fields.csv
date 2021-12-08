@@ -98,6 +98,8 @@
 ,763,24,95,1,0,0,,22F194,62F194,2ff,systemSupplierECUSoftwareNumber
 ,763,24,55,1,0,0,,22F195,62F195,2ff,systemSupplierECUSoftwareVersionNumber
 ,763,24,31,1,0,0,,22F1A0,62F1A0,ff,diagnosticVersion
+#763.622605.24,763,24,55,.01,0,2,km,222605,622605,1ff,ClusterDistBeforeReadjust
+#763.622101.24,763,24,55,.01,0,2,km,222101,622101,1ff,TripDistanceKm
 ,763,0,7,1,0,0,,14FFFFFF,54FFFFFF,ff,Reset DTC
 ,763,0,23,1,0,0,,19023b,5902ff,ff,Query DTC
 # HVAC / CLIM #

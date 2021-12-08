@@ -4,7 +4,6 @@ import static lu.fisch.canze.devices.Device.INTERVAL_ASAP;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.transition.Visibility;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,8 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.Callable;
-import java.util.concurrent.RunnableFuture;
 import java.util.function.Function;
 
 import lu.fisch.canze.R;
@@ -78,14 +75,23 @@ public class PandaDashboardActivity extends CanzeActivity implements DebugListen
             put(Sid.AvailableChargingPower, new PandaDashboardRecord(R.id.textMaxChargeAvailable, "%.1f kW", "0.0 kW", 10000));
 
             put(Sid.UserSoC, new PandaDashboardRecord(R.id.textPandaUserSoC, "%.1f", "---.-", 10000));
-            put(Sid.AvailableEnergy, new PandaDashboardRecord(R.id.textEnergyAvailable, "%.1f kWh", "--.- kWh", 10000));
+            put(Sid.AvailableEnergy, new PandaDashboardRecord(R.id.textEnergyAvailable, "%.2f kWh", "--.-- kWh", 10000));
 
             put(Sid.HvTemp, new PandaDashboardRecord(R.id.textBatteryTemperature, "%.0f", "--", 5000));
 
             put(Sid.ThermalComfortPower, new PandaDashboardRecord(R.id.textHvacConsumption, "%.2f", "-.--", 10000, d -> d / 1000, "%.0f"));
             put(Sid.TemperatureExterior, new PandaDashboardRecord(R.id.textTempOut, "%.1f°C", "--.-°C", 15000));
             put(Sid.TemperatureInterior, new PandaDashboardRecord(R.id.textTempIn, "%.1f°C", "--.-°C", 15000));
-            //put(Sid.MaxCharge, new PandaDashboardRecord(R.id.textMaxCharge, "%.1f", "--.-", 5000));
+
+            // These fields take too long to query (and also don't work)
+            //put(Sid.TDB_ClusterDistBeforeReadjust, new PandaDashboardRecord(R.id.textOdometer, "%.2f km", "------.-- km", 10000));
+            //put(Sid.TDB_TripDistanceKm, new PandaDashboardRecord(R.id.textTripMeter, "%.2f km", "------.-- km", 10000));
+        }
+    });
+
+    private final Map<String, Integer> additionalFields = Collections.unmodifiableMap(new HashMap<String, Integer>() {
+        {
+            put(Sid.EcoMode, 1000);
         }
     });
 
@@ -95,6 +101,9 @@ public class PandaDashboardActivity extends CanzeActivity implements DebugListen
         for (String field : fieldMapping.keySet()) {
             PandaDashboardRecord data = fieldMapping.get(field);
             addField(field, data.getInterval());
+        }
+        for (String field : additionalFields.keySet()) {
+            addField(field, additionalFields.get(field));
         }
     }
 
@@ -107,12 +116,16 @@ public class PandaDashboardActivity extends CanzeActivity implements DebugListen
                 if (fieldMapping.containsKey(fieldId)) {
                     PandaDashboardRecord record = fieldMapping.get(fieldId);
                     TextView view = findViewById(record.getTextRef());
-                    view.setText(record.formatValue(field.getValue()));
+                    if (view != null) {
+                        view.setText(record.formatValue(field.getValue()));
+                    } else {
+                        MainActivity.debug("FAIL " + fieldId + ": Could not find field on view");
+                    }
                 } else {
                     //noinspection SwitchStatementWithTooFewBranches
                     switch (fieldId) {
                         case Sid.EcoMode:
-                            setEcoMode(field.getValue() == (double) 2);
+                            setEcoMode(field.getValue() == (double) 1);
                             break;
                     }
                 }

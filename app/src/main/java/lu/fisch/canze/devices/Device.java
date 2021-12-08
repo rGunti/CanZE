@@ -670,22 +670,24 @@ public abstract class Device {
 
         if (frame == null) return null;
 
+        long requestStart = System.currentTimeMillis();
         if (frame.isIsoTp()) {
             msg = requestIsoTpFrame(frame);
         } else {
             if (MainActivity.altFieldsMode) MainActivity.toast(MainActivity.TOAST_NONE, "Free frame in ISOTP mode:" + frame.getRID()); // MainActivity.debug("********* free frame in alt mode ********: " + frame.getRID());
             msg = requestFreeFrame(frame);
         }
+        long requestEnd = System.currentTimeMillis();
 
         if (msg.isError()) {
-            MainActivity.debug("Device.requestframe: " + frame.getRID() + " returned error " + msg.getError());
+            MainActivity.debug("Device.requestframe: " + frame.getRID() + " returned error " + msg.getError() + " (took " + (requestEnd - requestStart) + "ms)");
             // when the answer is empty, the timeout is to low --> increase it!
             if (intervalMultiplicator < maxIntervalMultiplicator) {
                 intervalMultiplicator += 0.1;
                 MainActivity.debug("Device.requestframe: intervalMultiplicator+ = " + intervalMultiplicator);
             }
         } else {
-            MainActivity.debug("Device.requestframe: request for " + frame.getRID() + " returned data " + msg.getData());
+            MainActivity.debug("Device.requestframe: request for " + frame.getRID() + " returned data " + msg.getData() + " (took " + (requestEnd - requestStart) + "ms)");
             // theory: when the answer is good, we might recover slowly --> decrease it!
             // jm: but never below 1 ----> 2015-12-14 changed 10 1.3
             if (intervalMultiplicator > minIntervalMultiplicator) {

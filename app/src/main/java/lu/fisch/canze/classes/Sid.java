@@ -43,6 +43,9 @@ public class Sid {
     public static final String TireFLPressure                       = "673.40";
     public static final String HeaterSetpoint                       = "699.8";
 
+    public static final String TDB_ClusterDistBeforeReadjust        = "763.622605.24";
+    public static final String TDB_TripDistanceKm                   = "763.622101.24";
+
     public static final String EcoMode                              = "764.6143.86";
     public static final String ThermalComfortPower                  = "764.6143.88";
     public static final String TemperatureExterior                  = "764.6143.110";

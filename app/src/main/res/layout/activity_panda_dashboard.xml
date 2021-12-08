@@ -88,9 +88,10 @@
                                 android:layout_weight="1"
                                 />
                             <TextView
+                                android:text="@string/default_DoubleSpace" />
+                            <TextView
                                 android:text="@string/label_KiloWatts"
                                 android:gravity="end"
-                                android:layout_weight="1"
                                 />
                         </TableRow>
                     </TableLayout>
@@ -100,19 +101,18 @@
                     <TableLayout android:background="?attr/colorButtonNormal">
                         <TableRow android:layout_width="match_parent">
                             <TextView
+                                android:id="@+id/textEcoMode"
+                                android:text="@string/label_EcoModeEnabled"
+                                android:gravity="start"
+                                android:textStyle="bold"
+                                android:textColor="@color/Lime"
+                                />
+                            <TextView
                                 android:id="@+id/textEnergyAvailable"
-                                android:text="0.0 kWh"
+                                android:text="0.00 kWh"
                                 android:textStyle="bold"
                                 android:gravity="end"
                                 android:layout_weight="3"
-                                />
-                            <TextView
-                                android:id="@+id/textEcoMode"
-                                android:text="@string/label_EcoModeEnabled"
-                                android:gravity="end"
-                                android:textStyle="bold"
-                                android:textColor="@color/Green"
-                                android:layout_weight="1"
                                 />
                             <TextView
                                 android:text="@string/label_Percentage"
@@ -209,6 +209,7 @@
                                 android:gravity="end"
                                 android:textStyle="bold"
                                 android:width="60dp"
+                                android:textColor="@color/Green"
                                 />
                             <TextView
                                 android:id="@+id/textTempOut"
@@ -216,11 +217,14 @@
                                 android:gravity="end"
                                 android:textStyle="bold"
                                 android:width="60dp"
+                                android:textColor="@color/DodgerBlue"
+                                />
+                            <TextView android:text="@string/default_DoubleSpace"
+                                android:layout_weight="1"
                                 />
                             <TextView
                                 android:text="@string/label_KiloWatts"
-                                android:gravity="end"
-                                android:layout_weight="3" />
+                                android:gravity="end" />
                         </TableRow>
                     </TableLayout>
                     <TextView
@@ -233,6 +237,37 @@
             <TableRow android:layout_height="10dp" android:layout_width="match_parent">
                 <TextView android:text="@string/default_DoubleSpace" />
             </TableRow>
+
+            <!-- Hidden: ODO + Trip -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <TableRow android:layout_width="match_parent"
+                          android:layout_height="0dp">
+                    <TextView android:text="@string/default_DoubleSpace" android:layout_weight="1" />
+
+                    <TextView android:text="@string/label_Odo" />
+                    <TextView
+                        android:id="@+id/textOdometer"
+                        android:textStyle="bold|italic"
+                        android:text="000000.00 km"
+                        android:gravity="end"
+                        android:layout_width="100dp"/>
+
+                    <TextView android:text="@string/default_DoubleSpace" />
+
+                    <TextView android:text="@string/label_Trip" />
+                    <TextView
+                        android:id="@+id/textTripMeter"
+                        android:textStyle="bold|italic"
+                        android:text="000000.00 km"
+                        android:gravity="end"
+                        android:layout_width="100dp"/>
+
+                    <TextView android:text="@string/default_DoubleSpace" android:layout_weight="1" />
+                </TableRow>
+            </TableLayout>
 
         </LinearLayout>
 

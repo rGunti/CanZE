@@ -136,7 +136,7 @@
             android:label="CanSee"/>
         <activity
             android:name=".activities.PandaDashboardActivity"
-            android:label="Panda Dash" />
+            android:label="@string/panda_dash" />
     </application>
 
 </manifest>

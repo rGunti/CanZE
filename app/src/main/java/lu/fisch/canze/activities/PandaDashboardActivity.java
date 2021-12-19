@@ -134,7 +134,7 @@ public class PandaDashboardActivity extends CanzeActivity implements DebugListen
     }
 
     private void setEcoMode(boolean isEcoModeEnabled) {
-        findViewById(R.id.textEcoMode).setVisibility(isEcoModeEnabled ? View.VISIBLE : View.GONE);
+        findViewById(R.id.textEcoMode).setVisibility(isEcoModeEnabled ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override
